@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html ng-app="Jeopardy">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>This Is Jeopardy</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to Jeopardy!!!</h1>
+    <section ng-controller='QuestionController'>
+      <button ng-click='ask()'>Get Question</button>
+      <h3>here is your question:</h3>
+      <h4>${{trivia.difficulty}}</h4>
+      <p>{{trivia.question}}</p>
+      <input type="text" id="answer" ng-model='inputVal' placeholder="Answer">
+      <button ng-click='compare()'>Submit Answer</button>
+      <div class='rightAnswer'>
+        <h2>The correct answer was: {{trivia.rightAnswer}}</h2>
+      </div>
+      <div class="userScore">
+        <h1>Last Response: {{trivia.response}}</h1>
+        <h1>Score: ${{trivia.score}}</h1>
+      </div>
+    </section>
+
+  </body>
+</html>
