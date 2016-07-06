@@ -2,9 +2,10 @@ module.exports = function(x) {
     x.controller('QuestionController', function($scope, $http) {
 
         $scope.trivia = {
-            question: "what is your favorite color?",
+            question: "",
             answer: "",
-            difficulty: "0",
+            category:"",
+            difficulty: 0,
             score: 0,
             response: "",
             rightAnswer:"",
@@ -21,6 +22,7 @@ module.exports = function(x) {
                 $scope.trivia.question = newTrivia.question;
                 $scope.trivia.answer = newTrivia.answer;
                 $scope.trivia.difficulty = newTrivia.value;
+                $scope.trivia.category = newTrivia.category.title
             })
         };
 

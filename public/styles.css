@@ -1,0 +1,21 @@
+body {
+  background-color: blue;
+  color: white;
+  font-family: 'Rubik Mono One', sans-serif; }
+
+img {
+  float: right;
+  border-radius: 60%; }
+
+h1 {
+  text-align: center; }
+
+h4 {
+  text-align: center; }
+
+section {
+  font-family: Arial, sans-serif; }
+
+.category {
+  border: 3px solid yellow;
+  width: 20%; }
