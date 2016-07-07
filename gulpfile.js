@@ -8,6 +8,8 @@ gulp.task('default',['html','css','js','watch'], function(){
 });
 
 gulp.task('html', function() {
+    gulp.src('./templates/*.html').pipe(gulp.dest('./public/templates'));
+
     gulp.src(`./index.html`)
         .pipe(gulp.dest('./public'))
 });
@@ -30,5 +32,7 @@ gulp.task('watch', function(){
   gulp.watch('./index.html', ['html']);
   gulp.watch('./js/*.js', ['js']);
   gulp.watch('./js/*/*.js', ['js']);
+  gulp.watch('./templates/*.html', ['html']);
+
 
 })

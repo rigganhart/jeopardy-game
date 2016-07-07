@@ -7,30 +7,12 @@
     <title>This Is Jeopardy</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Rubik+Mono+One' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
-    <h1>Welcome to Jeopardy!</h1>
-    <img src="images/drunktrebek.jpg" alt="" />
-    <section ng-controller='QuestionController'>
-      <button ng-click='ask()'>Get Question</button>
-      <h3>here is your question:</h3>
-      <div class="category">
-      <h4>${{trivia.difficulty}}</h4>
-      <h4>{{trivia.category}}</h4>
-    </div>
-      <p>{{trivia.question}}</p>
-      <input type="text" id="answer" ng-model='inputVal' placeholder="Answer">
-      <button ng-click='compare()'>Submit Answer</button>
-      <div class='rightAnswer'>
-        <h2>The correct answer was: {{trivia.rightAnswer}}</h2>
-      </div>
-      <div class="userScore">
-        <h1>Last Response: {{trivia.response}}</h1>
-        <h1>Score: ${{trivia.score}}</h1>
-      </div>
-    </section>
-
+    <main ng-view></main>
+  
   </body>
 </html>
